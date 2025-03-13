@@ -1,25 +1,47 @@
 ---
 import astroLogo from '../assets/astro.svg';
 import background from '../assets/background.svg';
-
+import SectionA from '../components/SectionA.astro'
 import "../styles/global.css";
 
-import faceImage from '../assets/face.png';
+import faceImage from '../assets/liria_hi.webp';
 ---
-<div class="flex flex-row bg-amber-200 items-center justify-center min-h-screen p-8">
-    <div class="w-1/2 flex flex-row items-center justify-end pr-8">
-        <img src={faceImage.src} style="border-radius: 50%;" width="60%" alt="A bird sitting on a nest of eggs." />
+<main class="bg-[#5E6293] min-h-screen pt-24">
+    <!-- Hero Section -->
+    <div class="container mx-auto flex flex-col md:flex-row items-center justify-center min-h-[80vh] px-4">
+        <div class="md:w-1/2 flex justify-center md:justify-end mb-8 md:mb-0">
+            <div class="relative">
+                <div class="absolute  rounded-full  opacity-75 animate-pulse"></div>
+                <img 
+                    src={faceImage.src} 
+                    class="relative w-64 md:w-80 aspect-square object-cover rounded-full border-4 border-[#EC8BCCA]/50"
+                    alt="Hanami Liria profile picture" 
+                />
+            </div>
+        </div>
+
+        <div class="md:w-1/2 text-center md:text-left md:pl-12">
+            <p class="text-[#A44A2EB] text-xl mb-4 font-medium">Hi, my name is Hanami Liria!</p>
+            <h1 class="text-[#A44A2EB] text-4xl md:text-6xl font-bold mb-6">
+                I'm a freelance 
+                <span class="inline-block animate-bounce">✧</span>
+            </h1>
+            <p class="text-[#A44A2EB] text-4xl md:text-6xl font-bold mb-6">Artist </p>
+        </div>
     </div>
-    <div class="w-1/2 flex flex-col justify-center pl-8">
-        <p class="max-w-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quam eligendi et reiciendis harum doloribus quae amet totam quo 
-            distinctio explicabo consectetur iste quos nesciunt ut tempore, nulla dolorum est!</p>
+
+    <SectionA />
+
+    <!-- Commission Section -->
+    <div class="container mx-auto py-20 px-4  rounded-xl">
+        <div class="max-w-2xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-[#5E6293] mb-6">Check Out My Commissions</h2>
+            <p class="text-[#A44A2EB] mb-8 text-lg">Aqui puedes ver mis comisiones y etc</p>
+            
+            <a href="https://vgen.co/HanamiLiria" 
+               class="inline-block group relative px-8 py-3 bg-[#8988C6] rounded-lg overflow-hidden transition-all duration-300 hover:scale-105 hover:bg-[#839AD2]">
+                <span class="relative z-10 text-white font-medium text-lg">Visit My VGEN</span>
+            </a>
+        </div>
     </div>
-</div>
-<div>---------------</div>
-<div class="flex flex-col bg-amber-200 items-center justify-center  p-8">
-    <div class=" flex flex-col justify-center ">
-        <p class="max-w-lg">Aqui puedes ver mis comisiones y etc</p>
-    </div>
-	
-	<button class="group relative h-12 overflow-hidden overflow-x-hidden rounded-md bg-green-600 px-8 py-2 text-neutral-50"><span class="relative z-10">VGEN</span><span class="absolute inset-0 overflow-hidden rounded-md"><span class="absolute left-0 aspect-square w-full origin-center -translate-x-full rounded-full bg-pink-300 transition-all duration-500 group-hover:-translate-x-0 group-hover:scale-150"></span></span></button>
-</div>
+</main>

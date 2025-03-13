@@ -1,0 +1,53 @@
+---
+import Commision1 from '../assets/commi1.png'
+import Commision2 from '../assets/face.png'
+---
+<section class="bg-[#545a8a] py-20">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div>
+                <p class="text-purple-400 font-medium mb-4">My commisions</p>
+                <h2 class="text-white text-5xl font-bold mb-6">These are my illustrations</h2>
+                <p class="text-gray-400 mb-8">
+                    Estoy siempre al pendiente de mis trabajos y procuro mantener informados a las personas que me comisionan.
+                </p>
+                <p class="text-gray-400 mb-8">Pero, ¿Que que puedo hacer?</p>
+                
+                <ul class="space-y-4">
+                    <li class="flex items-center text-gray-300">
+                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        YCH, chibi, illustrations
+                    </li>
+                    <li class="flex items-center text-gray-300">
+                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Character Design, Outfit design
+                    </li>
+                    <li class="flex items-center text-gray-300">
+                        <svg class="w-5 h-5 mr-2 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Emotes
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Right Content - Stats Cards -->
+            <div class="grid grid-cols-2 gap-4">
+                <!-- Sales Difference Card -->
+                <div class="bg-[#2A2A2A] p-6 rounded-lg">
+                    <img src={Commision1.src} />
+                </div>
+
+                <!-- Channel Sales Card -->
+                <div class="bg-[#2A2A2A] p-6 rounded-lg">
+                   <img src={Commision2.src} />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

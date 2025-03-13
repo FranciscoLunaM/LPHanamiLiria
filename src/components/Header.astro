@@ -1,18 +1,55 @@
 ---
 import "../styles/global.css";
+import LirioImage from "../assets/imagenHeader.png"
+import vgenImage from "../assets/vgen.webp"
 ---
-<header class="w-full bg-purple-300/40 py-8">
-    <nav class="container mx-auto">
-        <ul class="flex items-center justify-center space-x-2 text-white text-lg font-medium">
-            <li><a href="/" class="hover:text-purple-200 transition-colors">HOME</a></li>
-            <li class="text-white">|</li>
-            <li><a href="/commission" class="hover:text-purple-200 transition-colors">COMMISSION</a></li>
-            <li class="text-white">|</li>
-            <li><a href="/tos" class="hover:text-purple-200 transition-colors">TOS</a></li>
-            <li class="text-white">|</li>
-            <li><a href="/order" class="hover:text-purple-200 transition-colors">ORDER</a></li>
-            <li class="text-white">|</li>
-            <li><a href="/pay-to-use" class="hover:text-purple-200 transition-colors">PAY TO USE</a></li>
-        </ul>
+<header class="w-full bg-[#5E6293] py-4 fixed top-0 left-0 z-50">
+    <nav class="container mx-auto px-4">
+        <!-- Desktop Navigation -->
+        <div class="hidden md:flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="/" class="text-2xl font-bold text-white flex items-center gap-4">
+                    {/* <img src={LirioImage.src} class="w-16 h-16 object-contain">*/}
+                    <span class="hover:text-purple-400 transition-colors">Hanami Liria</span>
+                </a>
+            </div>
+            
+            <ul class="flex items-center space-x-8">
+                <li><a href="/" class="text-gray-300 hover:text-purple-400 transition-colors">Home</a></li>
+                <li><a href="/features" class="text-gray-300 hover:text-purple-400 transition-colors">TOS</a></li>
+                <li><a href="/pricing" class="text-gray-300 hover:text-purple-400 transition-colors">Comissions</a></li>
+                <li><a href="/pricing" class="text-gray-300 hover:text-purple-400 transition-colors">QUEU</a></li>
+            </ul>
+
+            <div class="flex items-center">
+                <a href="https://vgen.co/HanamiLiria" class="text-gray-300 hover:text-purple-400 transition-colors w-[100px]">
+                    <img src={vgenImage.src} class="w-full h-auto"/>
+                </a>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <div class="md:hidden">
+            <!-- Mobile Logo -->
+            <div class="flex justify-center mb-4">
+                <a href="/" class="text-xl font-bold text-white flex flex-col items-center gap-2">
+                    <img src={LirioImage.src} class="w-12 h-12 object-contain">
+                    <span class="hover:text-purple-400 transition-colors">Hanami Liria</span>
+                </a>
+            </div>
+
+            <!-- Mobile Menu -->
+            <ul class="flex flex-col items-center space-y-4">
+                <li><a href="/" class="text-gray-300 hover:text-purple-400 transition-colors">Home</a></li>
+                <li><a href="/features" class="text-gray-300 hover:text-purple-400 transition-colors">TOS</a></li>
+                <li><a href="/pricing" class="text-gray-300 hover:text-purple-400 transition-colors">Comissions</a></li>
+                <li><a href="/pricing" class="text-gray-300 hover:text-purple-400 transition-colors">QUEU</a></li>
+                <li>
+                    <a href="https://vgen.co/HanamiLiria" class="text-gray-300 hover:text-purple-400 transition-colors">
+                        <img src={vgenImage.src} class="w-20 h-auto"/>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </nav>
 </header>
